@@ -13,11 +13,13 @@ This project explores two fundamental multiplexing approaches:
 ## Features
 
 ### TDM Implementation
+
 - Four input signals: sine wave, ramp, cosine wave, and constant signal
 - Configurable samples per time slot
 - Color-coded visualization of multiplexed signals showing which channel is active at each time
 
 ### OM Implementation
+
 - Three orthogonal sinusoidal signals at different frequencies (100 Hz, 200 Hz, 300 Hz)
 - Orthogonality verification via inner product calculation
 - Time-domain and frequency-domain (FFT) visualization
@@ -40,11 +42,13 @@ pip install -r requirements.txt
 ## Usage
 
 ### TDM Example
+
 ```bash
 python TDM.py
 ```
 
 Generates a plot with 5 subplots:
+
 - Signal A: Sine wave (5 Hz)
 - Signal B: Ramp signal
 - Signal C: Cosine wave (3 Hz)
@@ -52,11 +56,13 @@ Generates a plot with 5 subplots:
 - TDM Multiplexed Signal: Combined signal with color-coded channels
 
 ### OM Example
+
 ```bash
 python OM.py
 ```
 
 Generates two plots:
+
 - **Time-domain plot**: Individual signals and their orthogonal sum
 - **Frequency-domain plot**: FFT showing the three distinct frequency components
 
@@ -65,12 +71,16 @@ The orthogonality check output shows inner products ≈ 0 (confirming signals ar
 ## Parameters
 
 ### TDM
+
 Edit `TDM.py` to adjust:
+
 - `samples_per_slot`: Number of samples per channel in each time slot (default: 5)
 - `t`: Time axis range and resolution (default: 0 to 1 second with 1000 points)
 
 ### OM
+
 Edit `OM.py` to adjust:
+
 - `f1`, `f2`, `f3`: Frequency of each signal (default: 100 Hz, 200 Hz, 300 Hz)
 - `fs`: Sampling frequency (default: 1000 Hz)
 - `T`: Time duration (default: 1 second)
